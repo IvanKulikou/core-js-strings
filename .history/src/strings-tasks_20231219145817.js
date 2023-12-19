@@ -337,7 +337,7 @@ function countVowels(str) {
   let vowelCount = 0;
 
   // Loop through each character in the string
-  for (let i = 0; i < str.length; i += 1) {
+  for (let i = 0; i < str.length; i++) {
     // Check if the current character is a vowel
     if (
       str[i] === 'a' ||
@@ -354,7 +354,7 @@ function countVowels(str) {
       str[i] === 'Y'
     ) {
       // Increment the vowel count
-      vowelCount += 1;
+      vowelCount = vowelCount + 1;
     }
   }
 
