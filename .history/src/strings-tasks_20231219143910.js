@@ -255,22 +255,8 @@ function endsWith(str, substr) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(minutes, seconds) {
-  if (
-    !Number.isInteger(minutes) ||
-    !Number.isInteger(seconds) ||
-    minutes < 0 ||
-    seconds < 0
-  ) {
-    throw new Error(
-      'Invalid input. Both minutes and seconds should be non-negative integers.'
-    );
-  }
-
-  const formattedMinutes = String(minutes).padStart(2, '0');
-  const formattedSeconds = String(seconds).padStart(2, '0');
-
-  return `${formattedMinutes}:${formattedSeconds}`;
+function formatTime(/* minutes, seconds */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -283,8 +269,8 @@ function formatTime(minutes, seconds) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(str) {
-  return str.split('').reverse().join('');
+function reverseString(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
