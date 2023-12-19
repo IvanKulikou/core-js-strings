@@ -20,12 +20,7 @@
  *   getStringLength(undefined) => 0
  */
 function getStringLength(value) {
-  // Check if the value is defined and is of type string
-  if (typeof value === 'string' || value instanceof String) {
-    return value.length;
-  }
-
-  return 0;
+  return value.length();
 }
 
 /**
