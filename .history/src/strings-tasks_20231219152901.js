@@ -535,14 +535,8 @@ function extractEmails(str) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(str) {
-  return str.replace(/[a-zA-Z]/g, function (char) {
-    const isUpperCase = char === char.toUpperCase();
-    const offset = isUpperCase ? 65 : 97;
-    return String.fromCharCode(
-      ((char.charCodeAt(0) - offset + 13) % 26) + offset
-    );
-  });
+function encodeToRot13(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -569,28 +563,8 @@ function encodeToRot13(str) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(value) {
-  const suits = ['♣', '♦', '♥', '♠'];
-  const ranks = [
-    'A',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    'J',
-    'Q',
-    'K',
-  ];
-
-  const suitIndex = suits.indexOf(value[value.length - 1]);
-  const rankIndex = ranks.indexOf(value.slice(0, -1));
-
-  return suitIndex * ranks.length + rankIndex;
+function getCardId(/* value */) {
+  throw new Error('Not implemented');
 }
 
 module.exports = {
