@@ -177,12 +177,16 @@ function removeFirstOccurrences(str, value) {
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
 function removeLastOccurrences(str, value) {
+  // Find the index of the last occurrence of the value
   const index = str.lastIndexOf(value);
 
+  // Check if the value was found
   if (index !== -1) {
+    // Use string concatenation to remove the last occurrence
     return str.slice(0, index) + str.slice(index + value.length);
   }
 
+  // If the value was not found, return the original string
   return str;
 }
 
