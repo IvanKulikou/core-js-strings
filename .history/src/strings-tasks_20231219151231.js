@@ -427,8 +427,10 @@ function reverseWords(str) {
  *   invertCase('12345') => '12345'
  */
 function invertCase(str) {
+  // Create an array to store the inverted characters
   const invertedChars = [];
 
+  // Iterate through each character in the string
   for (let i = 0; i < str.length; i += 1) {
     const char = str[i];
 
