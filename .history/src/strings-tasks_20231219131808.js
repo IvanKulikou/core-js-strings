@@ -104,7 +104,23 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
 function removeLeadingWhitespaces(value) {
-  return value.trimStart();
+  let leadingWhitespaceCount = 0;
+
+  // Use for loop to count leading whitespaces
+  for (let i = 0; i < value.length; i++) {
+    if (value[i].trim() === '' && leadingWhitespaceCount < value.length) {
+      leadingWhitespaceCount++;
+    } else {
+
+    }
+  }
+
+  // Use slice to remove leading whitespaces
+  return value.slice(leadingWhitespaceCount);
+}
+
+  // Use slice to remove leading whitespaces
+  return value.slice(leadingWhitespaceCount);
 }
 
 /**
@@ -118,8 +134,8 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(value) {
-  return value.trimEnd();
+function removeTrailingWhitespaces(/* value */) {
+  throw new Error('Not implemented');
 }
 
 /**

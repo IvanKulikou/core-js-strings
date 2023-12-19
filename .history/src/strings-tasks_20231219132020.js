@@ -104,7 +104,8 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
 function removeLeadingWhitespaces(value) {
-  return value.trimStart();
+  // Use a regular expression to match leading whitespaces and replace them with an empty string
+  return value.replace(/^\s+/, '');
 }
 
 /**
@@ -118,8 +119,8 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(value) {
-  return value.trimEnd();
+function removeTrailingWhitespaces(/* value */) {
+  throw new Error('Not implemented');
 }
 
 /**
