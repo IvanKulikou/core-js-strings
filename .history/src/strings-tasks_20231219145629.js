@@ -333,33 +333,37 @@ function containsSubstring(str, substring) {
  *   countVowels('XYZ') => 1
  */
 function countVowels(str) {
-  // Initialize a counter for vowels
-  let vowelCount = 0;
+  /* eslint-disable no-restricted-syntax */
 
-  // Loop through each character in the string
-  for (let i = 0; i < str.length; i += 1) {
-    // Check if the current character is a vowel
-    if (
-      str[i] === 'a' ||
-      str[i] === 'e' ||
-      str[i] === 'i' ||
-      str[i] === 'o' ||
-      str[i] === 'u' ||
-      str[i] === 'A' ||
-      str[i] === 'E' ||
-      str[i] === 'I' ||
-      str[i] === 'O' ||
-      str[i] === 'U' ||
-      str[i] === 'y' ||
-      str[i] === 'Y'
-    ) {
-      // Increment the vowel count
-      vowelCount += 1;
+  // Define the set of vowels
+  const vowels = new Set([
+    'a',
+    'e',
+    'i',
+    'o',
+    'u',
+    'y',
+    'A',
+    'E',
+    'I',
+    'O',
+    'U',
+    'Y',
+  ]);
+
+  // Initialize the count
+  let count = 0;
+
+  // Iterate over each character in the string
+  for (const char of str) {
+    // Check if the character is a vowel
+    if (vowels.has(char)) {
+      count = +1;
     }
   }
 
-  // Return the final count of vowels
-  return vowelCount;
+  // Return the total count
+  return count;
 }
 
 /**
